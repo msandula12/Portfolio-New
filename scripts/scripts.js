@@ -17,6 +17,6 @@ $("a").click(function() {
 	$(this).text("Clicked");
 });
 
-$("#jqBonus").click(function() {
+$("p").click(function() {
 	$(this).toggleClass("bonus");
 });
