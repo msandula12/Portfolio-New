@@ -2,8 +2,15 @@
 fontBody = "Franklin Gothic Medium"
 fontHeadings = Verdana
 fontColor = #2f2f2f
+lightGray = #efefef
+darkTeal = #5f968e
+mintGreen = #bfdccf
+lightRed = #e05858
+lightTan = #d5c9b1
 
 /* general styles */
+// *
+// 	border 1px solid orange
 body
 	margin 0
 	padding 0	
@@ -11,23 +18,47 @@ body
 	color fontColor
 .page
 	display inline-block
-	height 500px
+	min-height 500px
+	padding 0px
+	width 100%
 .container
 	width 60%
 	margin auto
+h2
+	position absolute
+	text-transform uppercase
+	font-family fontHeadings
+	margin 15px 0px 0px 15px
+	font-size 1.4em
+h3
+	margin-top 15px
+	margin-bottom 15px
 p
-	margin 0px auto
+	margin 15px auto
 	line-height 1.4em
+p > a
+	color #333
+p > a:hover
+	color blue
+p > span
+	font-size 80%
+	font-style italic
+.example
+	background-color black
+	color white
+	font-family Consolas
+	padding 7px 7px 7px 14px
+	margin-bottom 15px
 
 /* page background colors */
 #blog
-	background-color #efefef
+	background-color lightGray
 #about
-	background-color #5f968e
+	background-color darkTeal
 #portfolio
-	background-color #bfdccf	
+	background-color mintGreen	
 #contact, #footer
-	background-color #e05858
+	background-color lightRed
 
 /* header */
 header 
@@ -38,44 +69,85 @@ header
 	flex-direction column
 	justify-content center
 	align-items center
-header p
+h1, header p
 	width 60%
-.bonus
-	color orange
-	position relative
-	left 100px
+h1
+	text-align center
 
 /* navigation bar */
+ul 
+	width 60%
+	padding 0
+	margin 0 auto
 li
+	margin 0.5%
+	width 22%
+	height 40px
 	background-color black
-	opacity 0.5
-	min-width 200px
-	min-height 50px
+	opacity 0.5	
 	display inline-block
 	text-transform uppercase
 	font-family fontHeadings
 	text-align center
-.toggleColor
-	background-color blue
 a
 	text-decoration none
-	color red
-	vertical-align middle
-a:hover
-	color: white
-h2
-	padding 10px
+	color white
+li:hover
+	opacity 0.7
+
+/* blog archives */
+#oldEntries
+	margin-top 15px
 	text-transform uppercase
-	font-family fontHeadings
+#oldEntries:hover, .archives:hover
+	cursor pointer
+	color blue
+.archives span 
+	font-size 0.8em
+.archives
+	display none
+#blogOne, #blogTwo
+	display none
 
 /* about page */
 #selfie
 	float left
 	width 140px
-	margin-right 20px
+	margin-right 15px
 	border-radius 100%
 
+/* contact page */
+input, textarea
+	display block
+	margin 10px 0px
+	height 30px
+	width 100%
+	border none
+	border-radius 10px
+	box-shadow inset 1px 1px 5px black
+textarea
+	height 80px
+button
+	background-color lightRed
+	width 100%
+	margin 10px 0px	
+	padding 10px
+	border 1px solid fontColor
+	border-radius 10px
+	box-shadow 1px 1px 5px fontColor
+	text-transform uppercase
+	font-family fontBody
+	color fontColor
+	font-size 1em
+button:hover
+	background-color lighten(lightRed, 20%)
+	cursor pointer
+#contact
+	min-height 400px	
+		
 /* footer */
+#footer
+	width 100%
 #footer > p
 	margin 0 auto
 	padding-bottom 10px

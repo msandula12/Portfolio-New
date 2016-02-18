@@ -1,22 +1,19 @@
-$('header').hide().fadeIn(800);
+// fade in background image
+$("header").hide().fadeIn(800);
 
-$("li").hover(
-	function() {
-		$(this).fadeTo(0, 0.25);
-	},
-	function() {
-		$(this).fadeTo(0, 0.5);
-	}
-);
-
-$("li").click(function() {
-	$(this).toggleClass("toggleColor");
+// toggle blog archive headlines
+$("#oldEntries").on("click", function() {
+	$(".archives").slideToggle();
 });
 
-$("a").click(function() {
-	$(this).text("Clicked");
+// toggle blog one
+$("#blogOneHead").on("click", function() {
+	$("#blogOne").slideToggle();
+	$("#blogOneHead>span").toggle();
 });
 
-$("p").click(function() {
-	$(this).toggleClass("bonus");
+// toggle blog two
+$("#blogTwoHead").on("click", function() {
+	$("#blogTwo").slideToggle();
+	$("#blogTwoHead>span").toggle();
 });
