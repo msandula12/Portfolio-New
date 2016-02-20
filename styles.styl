@@ -40,8 +40,9 @@ p
 	line-height 1.4em
 p > a
 	color #333
+	text-decoration none
 p > a:hover
-	color blue
+	color #3737ba
 p > span
 	font-size 80%
 	font-style italic
@@ -104,7 +105,9 @@ h4
 /* blog archives */
 #oldEntries
 	margin-top 15px
+	padding-top 10px
 	text-transform uppercase
+	border-top 1px solid fontColor
 #oldEntries:hover, .archives:hover
 	cursor pointer
 	color blue
@@ -164,3 +167,14 @@ button:hover
 	margin 0 auto
 	padding-bottom 10px
 	text-align center
+
+/* scroll-to-top button */
+.scrollToTop
+	position fixed
+	width 40px
+	right 2%
+	bottom 2%
+	cursor pointer
+	display none
+	border-radius 5px
+	box-shadow 1px 1px 8px fontColor

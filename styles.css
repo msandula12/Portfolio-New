@@ -33,9 +33,10 @@ p {
 }
 p > a {
   color: #333;
+  text-decoration: none;
 }
 p > a:hover {
-  color: #00f;
+  color: #3737ba;
 }
 p > span {
   font-size: 80%;
@@ -111,7 +112,9 @@ h4 {
 /* blog archives */
 #oldEntries {
   margin-top: 15px;
+  padding-top: 10px;
   text-transform: uppercase;
+  border-top: 1px solid #2f2f2f;
 }
 #oldEntries:hover,
 .archives:hover {
@@ -183,4 +186,15 @@ button:hover {
   margin: 0 auto;
   padding-bottom: 10px;
   text-align: center;
+}
+/* scroll-to-top button */
+.scrollToTop {
+  position: fixed;
+  width: 40px;
+  right: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px #2f2f2f;
 }
