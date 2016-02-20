@@ -9,8 +9,10 @@ lightRed = #e05858
 lightTan = #d5c9b1
 
 /* general styles */
+
 // *
 // 	border 1px solid orange
+
 body
 	margin 0
 	padding 0	
@@ -62,38 +64,42 @@ p > span
 
 /* header */
 header 
-	background-image url("images/ms-drums.jpg")
 	height 100vh
+	background-image url("images/ms-drums.jpg")
 	background-size cover
 	display flex
 	flex-direction column
 	justify-content center
 	align-items center
+#head 
+	width 100%
+	padding 15px 0px
+	background-color black
+	opacity 0.6
 h1, header p
 	width 60%
+	color lightGray
 h1
+	margin 20px auto 0px
 	text-align center
 
 /* navigation bar */
-ul 
+#navigation 
 	width 60%
-	padding 0
-	margin 0 auto
-li
-	margin 0.5%
-	width 22%
-	height 40px
-	background-color black
-	opacity 0.5	
-	display inline-block
+	margin 0px auto
+h4
+	margin 0px
+	word-spacing 20px
 	text-transform uppercase
 	font-family fontHeadings
 	text-align center
-a
+	letter-spacing 1px
+#navigation a
+	padding-bottom 8px
 	text-decoration none
 	color white
-li:hover
-	opacity 0.7
+#navigation a:hover
+	border-bottom 4px solid fontColor
 
 /* blog archives */
 #oldEntries
@@ -115,16 +121,19 @@ li:hover
 	width 140px
 	margin-right 15px
 	border-radius 100%
-
+	
 /* contact page */
 input, textarea
+	font-family fontBody
+	font-size 1em
+	padding 8px
 	display block
 	margin 10px 0px
 	height 30px
 	width 100%
 	border none
 	border-radius 10px
-	box-shadow inset 1px 1px 5px black
+	box-shadow inset 1px 1px 5px #000
 textarea
 	height 80px
 button
@@ -143,7 +152,7 @@ button:hover
 	background-color lighten(lightRed, 20%)
 	cursor pointer
 #contact
-	min-height 400px	
+	min-height 400px
 		
 /* footer */
 #footer
