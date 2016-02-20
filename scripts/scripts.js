@@ -1,19 +1,17 @@
 $(document).ready(function() {
 	
 	// scrolling down from top makes scroll-to-top arrow appear
-	var link,
-		toggleScrollToTop = function(){
-			if ($("body").scrollTop() > 600 || $("html").scrollTop() > 600) {
-				link.fadeIn(400);
-			} else {
-				link.fadeOut(400);
-			}
-		};
-	link = $(".scrollToTop");
-	$(window).scroll(toggleScrollToTop);
+	var scrollArrow = $(".scrollToTop");
+	$(window).scroll(function() {
+		if ($("body").scrollTop() > 600 || $("html").scrollTop() > 600) {
+			scrollArrow.fadeIn(400);
+		} else {
+			scrollArrow.fadeOut(400);
+		}
+	});
 	
 	// click activates scroll to top function
-	link.on("click", function() {
+	scrollArrow.on("click", function() {
 		$("body").animate({scrollTop: 0});
 		$("html").animate({scrollTop: 0});
 	});
