@@ -5,8 +5,7 @@ fontColor = #2f2f2f
 lightGray = #efefef
 darkTeal = #5f968e
 mintGreen = #bfdccf
-lightRed = #e05858
-lightTan = #d5c9b1
+lightRed = #e1532b
 
 /* general styles */
 
@@ -73,7 +72,7 @@ header
 	flex-direction column
 	justify-content center
 	align-items center
-#head 
+#head
 	width 100%
 	padding 15px 0px
 	background-color black
@@ -82,7 +81,7 @@ h1, header p
 	width 60%
 	color lightGray
 h1
-	margin 20px auto 0px
+	margin 30px auto 0px
 	text-align center
 
 /* navigation bar */
@@ -101,7 +100,7 @@ h4
 	text-decoration none
 	color white
 .navRow:hover
-	border-bottom 4px solid fontColor
+	border-bottom 5px solid fontColor
 
 /* blog archives */
 #oldEntries
@@ -156,6 +155,7 @@ input, textarea
 	box-sizing border-box
 	-moz-box-sizing border-box
 	-webkit-box-sizing border-box
+	background-color #c7c7c7
 textarea
 	height 80px
 button
@@ -171,7 +171,6 @@ button
 	color fontColor
 	font-size 1em
 button:hover
-	background-color lighten(lightRed, 20%)
 	cursor pointer
 #contact
 	min-height 400px
@@ -192,5 +191,20 @@ button:hover
 	bottom 2%
 	cursor pointer
 	display none
-	border-radius 5px
+	border-radius 8px
 	box-shadow 1px 1px 8px fontColor
+.scrollToTop:hover
+	background-color white
+	
+/* media queries */
+@media (max-width 950px)
+	h2
+		position relative
+		width 100%
+@media (max-width 700px)
+	.container
+		width 80%
+@media (max-width 500px)
+	.container
+		width 90%
+

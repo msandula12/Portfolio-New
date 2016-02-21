@@ -1,23 +1,20 @@
 $(document).ready(function() {
 	
 	// scrolling down from top makes scroll-to-top arrow appear
-	var scrollArrow = $(".scrollToTop");
-	$(window).scroll(function() {
+	var $scrollArrow = $(".scrollToTop");
+	$(window).on("scroll", function() {
 		if ($("body").scrollTop() > 600 || $("html").scrollTop() > 600) {
-			scrollArrow.fadeIn(400);
+			$scrollArrow.fadeIn(400);
 		} else {
-			scrollArrow.fadeOut(400);
+			$scrollArrow.fadeOut(400);
 		}
 	});
 	
 	// click activates scroll to top function
-	scrollArrow.on("click", function() {
+	$scrollArrow.on("click", function() {
 		$("body").animate({scrollTop: 0});
 		$("html").animate({scrollTop: 0});
 	});
-
-	// fade in background image
-	$("background-image").hide().fadeIn(800);
 
 	// toggle blog archive headlines
 	$("#oldEntries").on("click", function() {
@@ -34,5 +31,27 @@ $(document).ready(function() {
 	$("#blogTwoHead").on("click", function() {
 		$("#blogTwo").slideToggle();
 		$("#blogTwoHead>span").toggle();
+	});
+
+	// change form input fields to white on focus
+	$("input").on("focus", function() {
+		$(this).css("background-color", "white");
+	});
+	$("textarea").on("focus", function() {
+		$(this).css("background-color", "white");
+	});
+
+	// change color of form button on hover, mousedown, mouseup
+	$("button").hover(
+		function() {
+			$(this).css("background-color", "#e77555");
+		}, function() {
+			$(this).css("background-color", "#e1532b");
+		})
+	.mousedown(function() {
+		$(this).css("background-color", "#bc3e1b");
+	})
+	.mouseup(function() {
+		$(this).css("background-color", "#e1532b");
 	});
 });
