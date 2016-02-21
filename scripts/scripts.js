@@ -17,7 +17,7 @@ $(document).ready(function() {
 	});
 
 	// fade in background image
-	$("header").hide().fadeIn(800);
+	$("background-image").hide().fadeIn(800);
 
 	// toggle blog archive headlines
 	$("#oldEntries").on("click", function() {
