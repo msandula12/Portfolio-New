@@ -1,19 +1,27 @@
 $(document).ready(function() {
 	
 	// scrolling down from top makes scroll-to-top arrow appear
-	var $scrollArrow = $(".scrollToTop");
 	$(window).on("scroll", function() {
 		if ($("body").scrollTop() > 600 || $("html").scrollTop() > 600) {
-			$scrollArrow.fadeIn(400);
+			$(".scrollToTop").fadeIn(400);
 		} else {
-			$scrollArrow.fadeOut(400);
+			$(".scrollToTop").fadeOut(400);
 		}
 	});
 	
 	// click activates scroll to top function
-	$scrollArrow.on("click", function() {
+	$(".scrollToTop").on("click", function() {
 		$("body").animate({scrollTop: 0});
 		$("html").animate({scrollTop: 0});
+	});
+
+	// nav bar is fixed to top of page after scroll
+	$(window).on("scroll", function(e) {
+		if ($("body").scrollTop() > 300 || $("html").scrollTop() > 300) {
+			$("#navigation").addClass("navFixed");
+		} else {
+			$("#navigation").removeClass("navFixed");
+		}
 	});
 
 	// toggle blog archive headlines
@@ -46,12 +54,12 @@ $(document).ready(function() {
 		function() {
 			$(this).css("background-color", "#e77555");
 		}, function() {
-			$(this).css("background-color", "#e1532b");
+			$(this).css("background-color", "#e73a30");
 		})
 	.mousedown(function() {
 		$(this).css("background-color", "#bc3e1b");
 	})
 	.mouseup(function() {
-		$(this).css("background-color", "#e1532b");
+		$(this).css("background-color", "#e73a30");
 	});
 });

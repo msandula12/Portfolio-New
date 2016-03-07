@@ -5,7 +5,8 @@ fontColor = #2f2f2f
 lightGray = #efefef
 darkTeal = #5f968e
 mintGreen = #bfdccf
-lightRed = #e1532b
+lightRed = #e73a30
+blue = #0048c3
 
 /* general styles */
 
@@ -88,6 +89,14 @@ h1
 #navigation 
 	width 60%
 	margin 0px auto
+.navFixed
+	position fixed
+	left 0
+	right 0
+	top 0
+	min-width 100%
+	background-color black
+	padding 5px 0px 20px
 h4
 	margin 0px
 	word-spacing 20px
@@ -124,6 +133,15 @@ h4
 	width 140px
 	margin-right 15px
 	border-radius 100%
+.logo
+	width 30px
+	float left
+	margin-right 10px
+.socialPages
+	text-decoration none
+	color fontColor
+.socialPages:hover
+	color blue
 
 /* portfolio page */
 .projects, .projectsEven
@@ -138,7 +156,6 @@ h4
 	width 100%
 .projDescrip
 	font-size 85%
-
 	
 /* contact page */
 input, textarea
@@ -203,6 +220,8 @@ button:hover
 		width 100%
 	.container, #head *
 		width 70%
+	#navigation 
+		width 100%
 @media (max-width 700px)
 	.container, #head *
 		width 80%
