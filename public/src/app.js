@@ -43,10 +43,10 @@ $(document).ready(function() {
 
 	// change form input fields to white on focus
 	$("input").on("focus", function() {
-		$(this).css("background-color", "white");
+		$(this).css("background-color", "#fff");
 	});
 	$("textarea").on("focus", function() {
-		$(this).css("background-color", "white");
+		$(this).css("background-color", "#fff");
 	});
 
 	// change color of form button on hover, mousedown, mouseup
@@ -62,4 +62,27 @@ $(document).ready(function() {
 	.mouseup(function() {
 		$(this).css("background-color", "#e73a30");
 	});
+
+	// blog controller for older entries
+	$('.blogList').each(function(){
+		var $this     = $(this),
+		    $tab      = $this.find('li.active'),
+		    $link     = $tab.find('a'),
+		    $entry    = $($link.attr('href'));
+
+		    $this.on('click', '.blogControl', function(e) {
+		    	e.preventDefault();
+		    	var $link = $(this);
+		    	var id    = this.hash;
+
+		    	if (id && !$link.is('.active')){
+		    		$entry.removeClass('active');
+		    		$tab.removeClass('active');
+
+		    		$entry = $(id).addClass('active');
+		    		$tab   = $link.parent().addClass('active');
+		    	}
+		    })
+	});
+
 });

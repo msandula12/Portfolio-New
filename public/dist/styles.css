@@ -64,6 +64,42 @@ p > span {
 #footer {
   background-color: #e73a30;
 }
+.uiblog img {
+  width: 49%;
+}
+.oldBlogs {
+  margin-top: 20px;
+  position: absolute;
+  right: 20px;
+  padding-left: 20px;
+  border-left: 1px solid #d3d3d3;
+}
+.oldBlogs h3 {
+  margin: 0px 0px 10px;
+  text-transform: uppercase;
+}
+.oldBlogs ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+.oldBlogs li {
+  line-height: 1.4em;
+}
+.oldBlogs a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+.oldBlogs a:hover,
+.oldBlogs li.active a {
+  color: #0048c3;
+}
+.entry {
+  display: none;
+}
+.entry.active {
+  display: block;
+}
 /* header */
 header {
   height: 100vh;
@@ -77,8 +113,7 @@ header {
 #head {
   width: 100%;
   padding: 15px 0px;
-  background-color: #000;
-  opacity: 0.6;
+  background-color: rgba(0,0,0,0.6);
 }
 h1,
 header p {
@@ -100,7 +135,7 @@ h1 {
   right: 0;
   top: 0;
   min-width: 100%;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.6);
   padding: 5px 0px 20px;
 }
 h4 {
@@ -117,29 +152,7 @@ h4 {
   color: #fff;
 }
 .navRow:hover {
-  border-bottom: 5px solid #2f2f2f;
-}
-/* blog archives */
-#oldEntries {
-  margin-top: 15px;
-  padding-top: 10px;
-  text-transform: uppercase;
-  border-top: 1px solid #2f2f2f;
-}
-#oldEntries:hover,
-.archives:hover {
-  cursor: pointer;
-  color: #0048c3;
-}
-.archives span {
-  font-size: 0.8em;
-}
-.archives {
-  display: none;
-}
-#blogOne,
-#blogTwo {
-  display: none;
+  border-bottom: 5px solid #fff;
 }
 /* about page */
 #selfie {
@@ -152,13 +165,6 @@ h4 {
   width: 30px;
   float: left;
   margin-right: 10px;
-}
-.socialPages {
-  text-decoration: none;
-  color: #2f2f2f;
-}
-.socialPages:hover {
-  color: #0048c3;
 }
 /* portfolio page */
 .projects,
@@ -178,45 +184,22 @@ h4 {
 .projDescrip {
   font-size: 85%;
 }
+.contactMe {
+  margin-top: 30px;
+}
+.contactMe h3 {
+  margin-bottom: 30px;
+}
 /* contact page */
-input,
-textarea {
-  font-family: "Franklin Gothic Medium";
-  font-size: 1em;
-  padding: 8px;
-  display: block;
-  margin: 10px 0px;
-  height: 30px;
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  box-shadow: inset 1px 1px 5px #000;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  background-color: #c7c7c7;
-}
-textarea {
-  height: 80px;
-}
-button {
-  background-color: #e73a30;
-  width: 100%;
-  margin: 10px 0px;
-  padding: 10px;
-  border: 1px solid #2f2f2f;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px #2f2f2f;
-  text-transform: uppercase;
-  font-family: "Franklin Gothic Medium";
-  color: #2f2f2f;
-  font-size: 1em;
-}
-button:hover {
-  cursor: pointer;
-}
 #contact {
-  min-height: 400px;
+  min-height: 300px;
+}
+.socialPages {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+.socialPages:hover {
+  color: #0048c3;
 }
 /* footer */
 #footer {
