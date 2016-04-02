@@ -85,4 +85,37 @@ $(document).ready(function() {
 		    })
 	});
 
+	// portfolio info fades in and out when hovering over portfolio image
+	$('#item1').hover(
+		function(){
+			$('#img1').fadeIn(600);
+		}, function(){
+			$('#img1').fadeOut(600);
+		}
+	);
+
+	$('#item2').hover(
+		function(){
+			$('#img2').fadeIn(600);
+		}, function(){
+			$('#img2').fadeOut(600);
+		}
+	);
+
+	$('#item3').hover(
+		function(){
+			$('#img3').fadeIn(600);
+		}, function(){
+			$('#img3').fadeOut(600);
+		}
+	);
+
+	$('#item4').hover(
+		function(){
+			$('#img4').fadeIn(600);
+		}, function(){
+			$('#img4').fadeOut(600);
+		}
+	);	
+
 });
